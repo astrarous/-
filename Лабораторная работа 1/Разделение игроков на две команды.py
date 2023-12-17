@@ -1,5 +1,5 @@
 list_players = ["Маша", "Петя", "Саша", "Оля", "Кирилл", "Коля"]
 
-mediana = int(len(list_players) / 2)
+mediana = len(list_players) // 2
 
 print(list_players[:mediana], list_players[mediana:], sep='\n')
