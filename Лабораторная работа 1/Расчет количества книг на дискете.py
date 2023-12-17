@@ -1,10 +1,11 @@
-symbol = 4
-string = 25 * symbol
-page = 50 * string
-book = 100 * page
+BYTES_PER_SYMBOL = 4
+symbols = 25
+lines = 50
+pages = 100
 
-volume = 1.44 * 1024 * 1024
+disk_volume = 1.44 * 1024 * 1024
+book_volume = BYTES_PER_SYMBOL * symbols * lines * pages
 
-number = int(volume // book)
+number = int(disk_volume // book_volume)
 
 print("Количество книг, помещающихся на дискету:", number)
