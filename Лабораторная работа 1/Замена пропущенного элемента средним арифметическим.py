@@ -2,11 +2,11 @@ numbers = [2, -93, -2, 8, None, -44, -1, -85, -14, 90, -22, -90, -100, -8, 38, -
 
 indx = 0
 
-for i in range(len(numbers)):
-    if type(numbers[i]) != int:
+for i, number in enumerate(numbers):
+    if number is None:
         indx = i
 summary = sum(numbers[:indx]) + sum(numbers[indx + 1:])
-approximate = summary / len(numbers)
-numbers[indx] = approximate
+average = summary / len(numbers)
+numbers[indx] = average
 
 print("Измененный список:", numbers)
