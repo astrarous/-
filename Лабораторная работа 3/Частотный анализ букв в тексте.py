@@ -1,12 +1,12 @@
 def count_letters(text):
     text = text.lower()
     counters = {}
-    for i in range(len(text)):
-        if text[i].isalpha():
-            if text[i] in counters:
-                counters[text[i]] += 1
+    for char in text:
+        if char.isalpha():
+            if char in counters:
+                counters[char] += 1
             else:
-                counters[text[i]] = 1
+                counters[char] = 1
     return counters
 
 
